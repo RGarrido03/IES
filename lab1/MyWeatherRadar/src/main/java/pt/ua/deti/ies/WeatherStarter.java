@@ -11,11 +11,8 @@ import pt.ua.deti.ies.ipma_client.IpmaService;
  * demonstrates the use of the IPMA API for weather forecast
  */
 public class WeatherStarter {
-
-    //todo: should generalize for a city passed as argument
-    private static final int CITY_ID_AVEIRO = 1010500;
-
-    public static void  main(String[] args ) {
+    public static void main(String[] args) {
+        int CITY_ID = Integer.parseInt(args[0]);
 
         // get a retrofit instance, loaded with the GSon lib to convert JSON into objects
         Retrofit retrofit = new Retrofit.Builder()
@@ -26,7 +23,7 @@ public class WeatherStarter {
         // create a typed interface to use the remote API (a client)
         IpmaService service = retrofit.create(IpmaService.class);
         // prepare the call to remote endpoint
-        Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY_ID_AVEIRO);
+        Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY_ID);
 
         try {
             Response<IpmaCityForecast> apiResponse = callSync.execute();
