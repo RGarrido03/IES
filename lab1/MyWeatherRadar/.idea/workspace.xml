@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5f1fa0a-aeb7-4dc5-84eb-84dedc846a81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/ua/deti/ies/WeatherStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/ua/deti/ies/ipma_client/CityForecast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/ua/deti/ies/ipma_client/IpmaCityForecast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/ua/deti/ies/ipma_client/IpmaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pt/ua/deti/ies/WeatherStarterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ua/deti/ies/WeatherStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ua/deti/ies/WeatherStarter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2VNvItJ4hFEaRjRpJbNzYQ0MRNB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -56,11 +46,20 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.folding",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn exec:java" />
+    </option>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b5f1fa0a-aeb7-4dc5-84eb-84dedc846a81" name="Changes" comment="" />
@@ -68,8 +67,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694689275313</updated>
-      <workItem from="1694689276326" duration="2469000" />
+      <workItem from="1694689276326" duration="3880000" />
+      <workItem from="1694900224932" duration="2668000" />
     </task>
+    <task id="LOCAL-00001" summary="Create first Maven project">
+      <option name="closed" value="true" />
+      <created>1694691899867</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694691899867</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add MyWeatherRadar to lab1 folder">
+      <option name="closed" value="true" />
+      <created>1694692016062</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694692016062</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add initial MyWeatherRadar implementation to lab1 folder">
+      <option name="closed" value="true" />
+      <created>1694692292864</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694692292864</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +113,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Create first Maven project" />
+    <MESSAGE value="Add MyWeatherRadar to lab1 folder" />
+    <MESSAGE value="Add initial MyWeatherRadar implementation to lab1 folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial MyWeatherRadar implementation to lab1 folder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

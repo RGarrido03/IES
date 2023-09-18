@@ -15,10 +15,8 @@ public class WeatherStarter {
         int CITY_ID = Integer.parseInt(args[0]);
 
         // get a retrofit instance, loaded with the GSon lib to convert JSON into objects
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://api.ipma.pt/open-data/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://api.ipma.pt/open-data/")
+                                                  .addConverterFactory(GsonConverterFactory.create()).build();
 
         // create a typed interface to use the remote API (a client)
         IpmaService service = retrofit.create(IpmaService.class);
@@ -32,14 +30,21 @@ public class WeatherStarter {
             if (forecast != null) {
                 var firstDay = forecast.getData().listIterator().next();
 
-                System.out.printf( "max temp for %s is %4.1f %n",
-                        firstDay.getForecastDate(),
-                        Double.parseDouble(firstDay.getTMax()));
+                System.out.printf("""
+                                          Forecast for %s
+                                          Max temperature: %4.1f
+                                          Min temperature: %4.1f
+                                          Rain probability: %4.1f
+                                          Wind: %d %s""",
+                                  firstDay.getForecastDate(),
+                                  Double.parseDouble(firstDay.getTMax()), Double.parseDouble(firstDay.getTMin()),
+                                  Double.parseDouble(firstDay.getPrecipitaProb()), firstDay.getClassWindSpeed(),
+                                  firstDay.getPredWindDir());
             } else {
-                System.out.println( "No results for this request!");
+                System.out.println("No results for this request!");
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
 
     }
