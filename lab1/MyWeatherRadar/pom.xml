@@ -16,6 +16,20 @@
     <maven.compiler.target>20</maven.compiler.target>
   </properties>
 
+  <developers>
+    <developer>
+      <id>rgarrido03</id>
+      <name>Rúben Garrido</name>
+      <email>rubengarrido@ua.pt</email>
+      <organization>Universidade de Aveiro</organization>
+      <organizationUrl>https://www.ua.pt</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>0</timezone>
+    </developer>
+  </developers>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
