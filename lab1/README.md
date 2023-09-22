@@ -37,7 +37,8 @@ DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 </developers>
 ```
 
-## Recommended `log4j2.xml` configuration:
+## Log4j
+### Recommended `log4j2.xml`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Extra logging related to initialization of Log4j.
@@ -56,4 +57,76 @@ DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
         </Root>
     </Loggers>
 </Configuration>
+```
+
+### Dependencies
+```xml
+<dependency>
+  <groupId>org.apache.logging.log4j</groupId>
+  <artifactId>log4j-api</artifactId>
+  <version>2.20.0</version>
+</dependency>
+<dependency>
+  <groupId>org.apache.logging.log4j</groupId>
+  <artifactId>log4j-core</artifactId>
+  <version>2.20.0</version>
+</dependency>
+```
+
+### Main class variables and imports
+```java
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+// Replace "Main" with the main class name
+private static final Logger logger = LogManager.getLogger(Main.class);
+```
+
+## Dockerizing a Java app
+### `Dockerfile`
+```dockerfile
+FROM openjdk:21
+COPY target/[jar_name].jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+```
+
+### `pom.xml` properties
+```xml
+<build>
+  <finalName>[jar_name]</finalName>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.3.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>[main_class_path]</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-shade-plugin</artifactId>
+      <version>3.5.0</version>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>shade</goal>
+          </goals>
+          <configuration>
+            <transformers>
+              <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                <mainClass>[main_class_path]</mainClass>
+              </transformer>
+            </transformers>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
 ```
