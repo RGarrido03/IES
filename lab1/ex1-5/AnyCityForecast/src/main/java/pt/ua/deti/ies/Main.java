@@ -8,7 +8,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Main {
-    private static final Logger logger = LogManager.getLogger(WeatherStarter.class);
+    private static final Logger logger = LogManager.getLogger(Main.class);
 
     private Main() {
         Timer timer = new Timer();
