@@ -27,7 +27,7 @@ public class App {
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
             response.setContentType("text/html");
             response.setStatus(HttpServletResponse.SC_OK);
-            response.getWriter().println("<h1>New Hello Simple Servlet</h1>");
+            response.getWriter().println(request.getParameter("msg"));
         }
     }
 }
