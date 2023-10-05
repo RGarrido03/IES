@@ -1,4 +1,7 @@
 # Lab 2
+## Disclaimer
+Exercise 2.3 a\) is at the `lab2_3a` folder instead of the `lab2_3/lab2_3_a` one, because it's a simple exercise with no changes made. That way, paragraph b\) and c\) can be combined into a single `lab2_3` project.
+
 ## Deploy a Tomcat `.war`-based Docker container
 ### `Dockerfile`
 ```dockerfile
