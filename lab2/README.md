@@ -75,3 +75,27 @@ public class GreetingController {
 
 ### Serve static pages
 Place static HTML, CSS and JS files inside the `resources` folder.
+
+### REST controller, with JSON output
+```java
+public record RestGreeting(long id, String content) { }
+```
+
+```java
+import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class RestEndpointController {
+
+    private static final String template = "Hello, %s!";
+    private final AtomicLong counter = new AtomicLong();
+
+    @GetMapping("/restgreeting")
+    public RestGreeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return new RestGreeting(counter.incrementAndGet(), String.format(template, name));
+    }
+}
+```
