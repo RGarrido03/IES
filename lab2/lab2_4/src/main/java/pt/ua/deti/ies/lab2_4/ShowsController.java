@@ -10,13 +10,9 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ShowsController {
     private final AtomicLong counter = new AtomicLong();
 
-    @GetMapping("/shows")
-    public List<ShowsRecord> shows() {
+    @GetMapping("/api/shows")
+    public List<String> shows() {
         counter.set(-1);
-        return List.of(new ShowsRecord(counter.incrementAndGet(), "Braveheart (1995)",
-                                       "Every man dies; not every man really lives."),
-                       new ShowsRecord(counter.incrementAndGet(), "Harry Potter and the Goblet of Fire (2005)",
-                                       "What's comin' will come, and we'll meet it when it does."),
-                       new ShowsRecord(counter.incrementAndGet(), "The Hunger Games (2012)", null));
+        return Data.getShowsList();
     }
 }
