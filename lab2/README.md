@@ -1,6 +1,6 @@
 # Lab 2
 ## Disclaimer
-Exercise 2.3 a\) is at the `lab2_3a` folder instead of the `lab2_3/lab2_3_a` one, because it's a simple exercise with no changes made. That way, paragraph b\) and c\) can be combined into a single `lab2_3` project.
+Exercise 2.3 a\) is at the `lab2_3a` folder instead of the `lab2_3/lab2_3_a` one, because it's a simple exercise with no changes made. That way, exercises b\) and c\) were combined into a single `lab2_3` project.
 
 ## Deploy a Tomcat `.war`-based Docker container
 ### `Dockerfile`
@@ -99,3 +99,5 @@ public class RestEndpointController {
     }
 }
 ```
+
+By default, it returns OK (aka 200). However, if an HTTP error (e.g., 403 Bad Request) is needed, one should add a `HttpServletResponse` argument to the `@GetMapping` function and use `response.setStatus()`.
