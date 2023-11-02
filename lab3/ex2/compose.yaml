@@ -1,6 +1,6 @@
 services:
-  mysql5:
-    image: mysql/mysql-server:5.7
+  mysql:
+    image: mysql/mysql-server:latest-aarch64
     ports:
       - 33060:3306
     environment:
