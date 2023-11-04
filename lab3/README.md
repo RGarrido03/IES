@@ -81,7 +81,7 @@ public interface QuoteRepository extends JpaRepository<Quote, Integer> {
 ```
 
 ### Service
-Self-explanatory.
+Bridge between the endpoints and the repository.
 ```java
 @Service
 public class RepoService implements RepoServiceInterface {
