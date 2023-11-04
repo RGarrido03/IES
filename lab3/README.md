@@ -194,3 +194,6 @@ networks:
 volumes:
   mysqlvolume:
 ```
+
+## Postman testing
+Create the desired requests inside a collection in Postman. Check (and import) the collection [here](lab3.postman_collection.json).
